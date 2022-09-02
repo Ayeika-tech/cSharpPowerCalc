@@ -22,8 +22,14 @@ namespace cSharpLoopsAndSwitch
             Console.WriteLine("To exit press 0");
             int choice = Convert.ToInt32(Console.ReadLine());
             int total = GetPower(choice , number);
-
-            Console.WriteLine("Your total is " + total);
+            if(choice == 0)
+            {
+                Console.WriteLine("Goodbye");
+            }
+            else
+            {
+                Console.WriteLine("The answer is " + total);
+            }
 
             Console.ReadLine();
 
@@ -35,10 +41,7 @@ namespace cSharpLoopsAndSwitch
 
             switch (power)
 
-            {
-                case 0:
-                    break;
-                    
+            {      
                 case 1://squared
                     total = num * num;
                     break;
